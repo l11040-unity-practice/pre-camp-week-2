@@ -10,8 +10,9 @@ public class GameManager : MonoBehaviour
     public GameObject EndPanel;
     public Text TimeText;
     public Text NowScore;
+    public Text BestScore;
 
-
+    string _bestScoreKey = "bestScore";
     float _time = 0.0f;
     bool _isPlay = true;
 
@@ -48,6 +49,29 @@ public class GameManager : MonoBehaviour
         _isPlay = false;
         Time.timeScale = 0f;
         NowScore.text = _time.ToString("N2");
+        SetBestScore(_time);
         EndPanel.SetActive(true);
+    }
+
+    void SetBestScore(float score)
+    {
+        if (PlayerPrefs.HasKey(_bestScoreKey))
+        {
+            float best = PlayerPrefs.GetFloat(_bestScoreKey);
+            if (best < score)
+            {
+                PlayerPrefs.SetFloat(_bestScoreKey, score);
+                BestScore.text = score.ToString("N2");
+            }
+            else
+            {
+                BestScore.text = best.ToString("N2");
+            }
+        }
+        else
+        {
+            PlayerPrefs.SetFloat(_bestScoreKey, score);
+            BestScore.text = score.ToString("N2");
+        }
     }
 }

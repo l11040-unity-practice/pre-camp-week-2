@@ -304,6 +304,7 @@ MonoBehaviour:
   EndPanel: {fileID: 1691223464}
   TimeText: {fileID: 715491530}
   NowScore: {fileID: 2002074769}
+  BestScore: {fileID: 516770320}
 --- !u!1 &426755996
 GameObject:
   m_ObjectHideFlags: 0
