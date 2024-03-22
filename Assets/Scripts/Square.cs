@@ -14,6 +14,14 @@ public class Square : MonoBehaviour
         this.transform.localScale = new Vector2(size, size);
     }
 
+    void Update()
+    {
+        if (this.transform.position.y < -5.0f)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
