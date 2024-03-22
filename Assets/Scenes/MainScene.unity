@@ -301,7 +301,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Square: {fileID: 704729488827364868, guid: 27f494a2987f4dc46a4ae5192505074f, type: 3}
+  EndPanel: {fileID: 1691223464}
   TimeText: {fileID: 715491530}
+  NowScore: {fileID: 2002074769}
 --- !u!1 &426755996
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,7 +402,7 @@ GameObject:
   - component: {fileID: 447036773}
   m_Layer: 0
   m_Name: Balloon
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -949,6 +951,7 @@ GameObject:
   - component: {fileID: 710778569}
   - component: {fileID: 710778568}
   - component: {fileID: 710778567}
+  - component: {fileID: 710778570}
   m_Layer: 5
   m_Name: RetryButton
   m_TagString: Untagged
@@ -1019,7 +1022,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 710778568}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 710778570}
+        m_TargetAssemblyTypeName: RetryButton, Assembly-CSharp
+        m_MethodName: OnRetry
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &710778568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1058,6 +1073,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 710778565}
   m_CullTransparentMesh: 1
+--- !u!114 &710778570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710778565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d785af90a1ce3a945b0fdccb69df4b42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &715491528
 GameObject:
   m_ObjectHideFlags: 0

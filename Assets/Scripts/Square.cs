@@ -14,8 +14,11 @@ public class Square : MonoBehaviour
         this.transform.localScale = new Vector2(size, size);
     }
 
-    void Update()
+    private void OnCollisionEnter2D(Collision2D other)
     {
-
+        if (other.gameObject.CompareTag("Player"))
+        {
+            GameManager.Instance.GameOver();
+        }
     }
 }
