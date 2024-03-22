@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 345235497}
   - component: {fileID: 345235496}
+  - component: {fileID: 345235498}
   m_Layer: 0
   m_Name: Shield
   m_TagString: Untagged
@@ -207,6 +208,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &345235498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345235495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b033392752c98649bd77f5b3bae9ec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &426755996
 GameObject:
   m_ObjectHideFlags: 0
