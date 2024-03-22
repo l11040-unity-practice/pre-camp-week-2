@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public GameObject Square;
     public Text TimeText;
 
-    float time = 0.0f;
+    float _time = 0.0f;
 
     void Start()
     {
@@ -17,8 +17,8 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        time += Time.deltaTime;
-        TimeText.text = time.ToString("N2");
+        _time += Time.deltaTime;
+        TimeText.text = _time.ToString("N2");
     }
 
     void MakeSquare()
